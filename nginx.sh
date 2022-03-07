@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 index="/var/www/html/index.html"
 sudo apt update
 sudo apt install nginx
