@@ -1,15 +1,8 @@
 #!/bin/bash
-index="/var/www/html/index.html"
 sudo apt update
-sudo apt install nginx
-sudo ufw app list
+sudo apt install nginx -y
 sudo ufw allow 'Nginx HTTP'
-sudo ufw status 
-systemctl status nginx
 cd /var/www/html
-sudo rm index.html
-sudo vi $index > /dev/null <<EOF
-  
-  Welcome to gabes webpage!
-EOF
-systemctl restart nginx
+sudo rm index.nginx-debian.html
+sudo echo "Welcome to gabes SEC 350 webpage" > index.html
+sudo systemctl restart nginx
