@@ -1,5 +1,5 @@
 #!bin/bash
-index="/var/www/html/index.html
+index="/var/www/html/index.html"
 sudo apt update
 sudo apt install nginx
 sudo ufw app list
